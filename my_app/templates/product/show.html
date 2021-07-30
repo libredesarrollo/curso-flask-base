@@ -8,7 +8,7 @@
 <p>{{ product['category'] }}</p>
 <p>$ {{ product['price'] }}</p>
 
-{% if product['price'] and product['price'] >= 1000 %}
+{% if product['price'] >= 1000 %}
  <p>Precio Regular</p>
 {% else %}
 <p>Precio oferta!!</p>

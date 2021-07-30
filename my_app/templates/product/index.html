@@ -1,11 +1,25 @@
 {% extends 'layout/base.html' %}
 
 {% block container %}
-    {% for key, product in products.items() %}
+    {% for product in products.items %}
         <div>
-            <a href="{{ url_for('product.show', id=key) }}">{{ loop.cycle('impar', 'par') }} {{ product['name'] }}</a>
+            <a href="{{ url_for('product.show', id=product['id']) }}">{{ product['name'] }}</a>
 
-            
+            <a href="{{ url_for('product.update', id=product['id']) }}">Editar</a>
+
+            <a href="{{ url_for('product.delete', id=product['id']) }}">Eliminar</a>
         </div>
     {% endfor %}
+
+    <div class=pagination>
+        {%- for page in products.iter_pages() %}
+          
+            {% if page != products.page %}
+              <a href="{{ url_for('product.index', page=page) }}">{{ page }}</a>
+            {% else %}
+              <strong>{{ page }}</strong>
+            {% endif %}
+        {%- endfor %}
+    </div>
+
 {% endblock %}

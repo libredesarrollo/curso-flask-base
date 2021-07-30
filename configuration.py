@@ -3,6 +3,7 @@ class BaseConfig(object):
     SECRET_KEY = 'Key'
     DEBUG = True
     TESTING = False
+    SQLALCHEMY_DATABASE_URI="mysql+pymysql://root:PepeLePew7@localhost:3306/pyalmacen"
 class ProductionConfig(BaseConfig):
     'Produccion configuracion'
     DEBUG = False
