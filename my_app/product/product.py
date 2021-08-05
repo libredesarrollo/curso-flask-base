@@ -6,13 +6,14 @@ from sqlalchemy.sql.expression import not_,or_
 from my_app import db
 from my_app.product.model.products import PRODUCTS
 from my_app.product.model.product import Product
+from my_app.product.model.category import Category
 from my_app.product.model.product import ProductForm
 
 
 product = Blueprint('product',__name__)
 
 @product.route('/product')
-#@product.route('/product/<int:page>')
+@product.route('/product/<int:page>')
 def index(page=1):
    return render_template('product/index.html', products=Product.query.paginate(page,5))
 
@@ -34,9 +35,13 @@ def delete(id):
 @product.route('/product-create', methods=('GET', 'POST'))
 def create():
    form = ProductForm(meta={'csrf':False})
+
+   categories = [ (c.id, c.name) for c in Category.query.all()]
+   form.category_id.choices = categories
+
    if form.validate_on_submit():
       #crear producto
-      p = Product(request.form['name'],request.form['price'])
+      p = Product(request.form['name'],request.form['price'],request.form['category_id'])
       db.session.add(p)
       db.session.commit()
       flash("Producto creado con éxito")
@@ -53,22 +58,29 @@ def update(id):
    product = Product.query.get_or_404(id)   
    form = ProductForm(meta={'csrf':False})
 
+   categories = [ (c.id, c.name) for c in Category.query.all()]
+   form.category_id.choices = categories
+
+   print(product.category)
+
    if request.method == 'GET':
       form.name.data = product.name
       form.price.data = product.price
+      form.category_id.data = product.category_id
 
    if form.validate_on_submit():
       #actualizar producto
       product.name = form.name.data
       product.price = form.price.data
+      product.category_id = form.category_id.data
 
       db.session.add(product)
       db.session.commit()
       flash("Producto actualizado con éxito")
       return redirect(url_for('product.update',id=product.id))
 
-      if form.errors:
-         flash(form.errors,'danger')
+   if form.errors:
+      flash(form.errors,'danger')
 
    return render_template('product/update.html',product=product, form=form)
    
