@@ -2,8 +2,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, get_flashed_messages
 from werkzeug.exceptions import abort
 from sqlalchemy.sql.expression import not_,or_
+from flask_login import login_required
 
 from my_app import db
+from my_app import rol_admin_need
 from my_app.product.model.products import PRODUCTS
 from my_app.product.model.product import Product
 from my_app.product.model.category import Category
@@ -11,6 +13,12 @@ from my_app.product.model.product import ProductForm
 
 
 product = Blueprint('product',__name__)
+
+@product.before_request
+@login_required
+@rol_admin_need
+def constructor():
+   pass
 
 @product.route('/product')
 @product.route('/product/<int:page>')

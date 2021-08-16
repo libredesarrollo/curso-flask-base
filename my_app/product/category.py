@@ -2,13 +2,21 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, get_flashed_messages
 from werkzeug.exceptions import abort
 from sqlalchemy.sql.expression import not_,or_
+from flask_login import login_required
 
-from my_app import db
+from my_app import db, rol_admin_need
 from my_app.product.model.category import Category
 from my_app.product.model.category import CategoryForm
 
 
 category = Blueprint('category',__name__)
+
+@category.before_request
+@login_required
+@rol_admin_need
+def constructor():
+   pass
+
 
 @category.route('/category')
 @category.route('/category/<int:page>')
