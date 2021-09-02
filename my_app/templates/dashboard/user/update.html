@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% block container %}
+<div class="card">
+    <div class="card-header">
+        Actualizar usuario: {{user.username}}
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+
+            {{ form.csrf_token }}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form.new_username.label }}
+                        {{ form.new_username(class="form-control") }}
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form.old_password.label }}
+                        {{ form.old_password(class="form-control") }}
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Actualizar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,11 +1,15 @@
 #from my_app import app
+import os
 from flask import Blueprint, render_template, request, redirect, url_for, flash, get_flashed_messages
+from werkzeug.utils import secure_filename
 from werkzeug.exceptions import abort
 from sqlalchemy.sql.expression import not_,or_
-from flask_login import login_required
 
-from my_app import db
-from my_app import rol_admin_need
+from flask_login import login_required
+from flask_user import roles_required
+
+from my_app import db, app, ALLOWED_EXTENSIONS_FILES
+from my_app import rol_admin_need, cache
 from my_app.product.model.products import PRODUCTS
 from my_app.product.model.product import Product
 from my_app.product.model.category import Category
@@ -14,19 +18,38 @@ from my_app.product.model.product import ProductForm
 
 product = Blueprint('product',__name__)
 
+import time
+
+@product.route('/test2')
+@cache.cached(timeout=60)
+def test2():
+   time.sleep(3)
+   return "Hola mundo"
+
 @product.before_request
 @login_required
-@rol_admin_need
+#@rol_admin_need
+@roles_required('Admin')
 def constructor():
    pass
 
+def allowed_extensions_file(filename):
+   return '.' in filename and filename.lower().rsplit('.', 1)[1] in ALLOWED_EXTENSIONS_FILES
+
 @product.route('/product')
 @product.route('/product/<int:page>')
+@cache.cached(timeout=60)
 def index(page=1):
    return render_template('product/index.html', products=Product.query.paginate(page,5))
 
-@product.route('/product/<int:id>')
+@product.route('/show/<int:id>')
 def show(id):
+   product = Product.query.get_or_404(id)   
+   return render_template('product/show.html', product=product)
+
+@product.route('/show2',defaults={'id':28})
+@product.route('/show2/<int:id>')
+def show2(id):
    product = Product.query.get_or_404(id)   
    return render_template('product/show.html', product=product)
 
@@ -42,7 +65,7 @@ def delete(id):
 
 @product.route('/product-create', methods=('GET', 'POST'))
 def create():
-   form = ProductForm(meta={'csrf':False})
+   form = ProductForm()#meta={'csrf':False}
 
    categories = [ (c.id, c.name) for c in Category.query.all()]
    form.category_id.choices = categories
@@ -64,12 +87,12 @@ def create():
 @product.route('/product-update/<int:id>', methods=['GET','POST'])
 def update(id):
    product = Product.query.get_or_404(id)   
-   form = ProductForm(meta={'csrf':False})
+   form = ProductForm()#meta={'csrf':False}
+
+   app.logger.info("Actualizar producto")
 
    categories = [ (c.id, c.name) for c in Category.query.all()]
    form.category_id.choices = categories
-
-   print(product.category)
 
    if request.method == 'GET':
       form.name.data = product.name
@@ -82,13 +105,23 @@ def update(id):
       product.price = form.price.data
       product.category_id = form.category_id.data
 
+      if form.file.data:
+         file = form.file.data
+         if allowed_extensions_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+            product.file = filename
+
       db.session.add(product)
       db.session.commit()
       flash("Producto actualizado con éxito")
       return redirect(url_for('product.update',id=product.id))
 
    if form.errors:
-      flash(form.errors,'danger')
+      print("__________")
+      print(form.errors.items())
+      #print(form.name.errors)
+      flash(form.errors.items(),'form-error')
 
    return render_template('product/update.html',product=product, form=form)
    

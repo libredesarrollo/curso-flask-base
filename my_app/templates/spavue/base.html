@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='global/css/style.custom.css') }}">
+
+    <title>CRUD</title>
+</head>
+<body>
+    {% include 'fragment/_nav.html' %}
+
+    
+<div class="container mt-3">
+
+    {% include 'fragment/_alert.html' %}
+
+    <div id="app">
+        {% raw %}
+
+            
+        <product-list></product-list>
+       
+
+        {% endraw %}
+    </div>
+</div>
+
+    {% include 'fragment/_footer.html' %}
+    <script src="{{ url_for('static',filename='global/js/jquery-3.4.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/vue.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/vue/componets/product-list.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/vue/componets/product-delete.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/vue/componets/product-save.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/vue/app.js') }}"></script>
+
+</body>
+</html>

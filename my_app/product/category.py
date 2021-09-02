@@ -2,25 +2,52 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, get_flashed_messages
 from werkzeug.exceptions import abort
 from sqlalchemy.sql.expression import not_,or_
-from flask_login import login_required
 
-from my_app import db, rol_admin_need
+from flask_login import login_required
+from flask_user import roles_required
+
+from flask_mail import Message
+from flask_babel import gettext
+
+from my_app import db, rol_admin_need,mail, app, get_locale
 from my_app.product.model.category import Category
 from my_app.product.model.category import CategoryForm
+
+from collections import namedtuple
 
 
 category = Blueprint('category',__name__)
 
 @category.before_request
 @login_required
-@rol_admin_need
+#@rol_admin_need
+@roles_required('Admin')
 def constructor():
    pass
-
 
 @category.route('/category')
 @category.route('/category/<int:page>')
 def index(page=1):
+
+   name = gettext('name')
+   gettext('save')
+   gettext('update')
+   gettext('create')
+   gettext('delete')
+
+   print(gettext('save'))
+
+   print(get_locale())
+
+   msg = Message('Hola Flask!!',sender=('andres',"andres@gmail.com"),recipients=['andres@desarrollolibre.net'])
+   msg.body = "Hola Mundo"
+   msg.html = "<b>testing</b>"
+
+   with app.open_resource("static/uploads/D4yVpirWsAAy-d0.png") as fp:
+      msg.attach("logo.png", "image/png", fp.read())
+
+   #mail.send(msg)
+
    return render_template('category/index.html', categories=Category.query.paginate(page,5))
 
 @category.route('/category/<int:id>')
@@ -40,7 +67,7 @@ def delete(id):
 
 @category.route('/category-create', methods=('GET', 'POST'))
 def create():
-   form = CategoryForm(meta={'csrf':False})
+   form = CategoryForm() #meta={'csrf':False}
    if form.validate_on_submit():
       #crear categoryo
       p = Category(request.form['name'])
@@ -58,16 +85,32 @@ def create():
 @category.route('/category-update/<int:id>', methods=['GET','POST'])
 def update(id):
    category = Category.query.get_or_404(id)   
-   form = CategoryForm(meta={'csrf':False})
 
-   print(category.products)#.first()
+
+   group = namedtuple('Group',['phoneCode','countryCode','phone'])
+
+   g1 = group('416','+58','15464845456')
+   g2 = group('476','+63','15461325456')
+   g3 = group('496','+01','15464841456')
+
+   phones = {'phones': [g1, g2 ,g3]}
+
+   form = CategoryForm(data=phones) #meta={'csrf':False}
+
+   #del form.phonelist
+
+   #c = Category(name="Cate 1")
 
    if request.method == 'GET':
       form.name.data = category.name
+      form.id.data = category.id
 
    if form.validate_on_submit():
       #actualizar categoryo
       category.name = form.name.data
+
+      #form.populate_obj(c)
+      #print(c.name)
 
       db.session.add(category)
       db.session.commit()

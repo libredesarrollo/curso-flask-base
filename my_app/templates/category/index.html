@@ -9,19 +9,30 @@
     <br>
     <div class="list-category">
     {% for category in categories.items %}
-        <div class="card pb-2 pt-3 mb-3 {{ loop.cycle('odd', 'even') }}">
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
-            <h3>
-                <a href="{{ url_for('category.show', id=category['id']) }}">
-                    {{ category['name'] }}
-                </a>
-            </h3>
-
-            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-success btn-sm" href="{{ url_for('category.update', id=category['id']) }}"><i class="fa fa-edit"></i></a>
-
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                
+              </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                {{ category['name'] }}
+              </div>
+            </div>
+  
+            <div class="col-auto">              
+              <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-success btn-sm" href="{{ url_for('category.update', id=category['id']) }}"><i class="fa fa-edit"></i></a>
             <button data-toggle="modal" data-target="#deleteModal" data-name="{{ category['name'] }}" data-id="{{category['id']}}" class="btn btn-danger btn-sm" href="{{ url_for('category.delete', id=category['id']) }}"><i data-toggle="tooltip" data-placement="top" title="Eliminar categoria {{ category['name'] }}" class="fa fa-trash"></i></button>
+            </div>  
+          </div>
+  
         </div>
       </div>
+    </div>
+
+
     {% endfor %}
 </div>
 

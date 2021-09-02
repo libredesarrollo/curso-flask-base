@@ -1,9 +1,17 @@
 {% extends 'layout/base.html' %}
 
 {% block container %}
-    <form action="{{ url_for('product.create') }}" method="POST">
-        {% include 'product/_form.html' %}
+<div class="card">
+    <div class="card-header">
+        Crear producto
+    </div>
+    <div class="card-body">
+        <form action="{{ url_for('product.create') }}" method="POST">
+            {% include 'product/_form.html' %}
 
-        <input class="btn btn-success" type="submit" value="Enviar">
-    </form>
+            <button class="btn btn-success" type="submit"><i class="fa fa-save"></i> Guardar</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}

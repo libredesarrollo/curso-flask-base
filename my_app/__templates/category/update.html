@@ -1,0 +1,8 @@
+{% extends 'layout/base.html' %}
+
+{% block container %}
+    <form action="{{ url_for('category.update',id=category.id) }}" method="POST">
+        {% include 'category/_form.html' %}
+        <input class="btn btn-success mt-2" type="submit" value="Actualizar">
+    </form>
+{% endblock %}

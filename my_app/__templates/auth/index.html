@@ -1,0 +1,71 @@
+{% extends 'layout/base.html' %}
+{% from 'macro/_pagination.html' import m_pagination %}
+
+{% block container %}
+
+<a class="btn btn-primary mt-2 mb-2" href="{{ url_for('product.create') }}"><i class="fa fa-plus"></i> Crear</a>
+
+
+    <br>
+    <div class="list-product">
+    {% for product in products.items %}
+        <div class="jumbotron pb-2 pt-3 {{ loop.cycle('odd', 'even') }}">
+            <h3>
+                <a href="{{ url_for('product.show', id=product['id']) }}">
+                    {{ product['name'] }}
+                </a>
+            </h3>
+
+            <h5>{{ product['category'].name }}</h5>
+
+            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-success btn-sm" href="{{ url_for('product.update', id=product['id']) }}"><i class="fa fa-edit"></i></a>
+
+            <button data-toggle="modal" data-target="#deleteModal" data-name="{{ product['name'] }}" data-id="{{product['id']}}" class="btn btn-danger btn-sm" href="{{ url_for('product.delete', id=product['id']) }}"><i  data-toggle="tooltip"  title="Eliminar producto {{ product['name'] }}" data-placement="top"class="fa fa-trash"></i></button>
+        </div>
+    {% endfor %}
+</div>
+
+    {{ m_pagination(products) }}
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Borrar: <span></span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ¿Seguro que desea borrar el registro seleccionado?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <a href="#" id="deleteProduct" class="btn btn-danger">Borrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+          window.onload= function(){
+                $('#deleteModal').on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget) // Button that triggered the modal
+                    var name = button.data('name') // Extract info from data-* attributes
+                    var id = button.data('id') // Extract info from data-* attributes
+                    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                    var modal = $(this)
+                    modal.find('.modal-title span').text(name)
+
+                    $("#deleteProduct").attr("href","/product-delete/"+id)
+
+                    
+                })
+            }
+      </script>
+
+    
+
+      
+
+{% endblock %}
