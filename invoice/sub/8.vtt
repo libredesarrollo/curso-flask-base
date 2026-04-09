@@ -1,0 +1,109 @@
+WEBVTT
+
+00:05.030 --> 00:09.200
+Bien perfecto ya tenemos los datos con los cuales vamos trabajar y con los cuales vamos a poder construir
+
+00:09.200 --> 00:11.800
+nuestro listado aquí en nuestra vista de paz.
+
+00:11.990 --> 00:15.140
+Así que lo siguiente que vamos a hacer sería construir este listado.
+
+00:15.320 --> 00:16.480
+Simplemente sería por aquí.
+
+00:16.490 --> 00:21.710
+Básicamente sería lo mismo que ya tenemos en este punto así que vamos a buscar aquí el Index de nuestro
+
+00:21.710 --> 00:26.750
+producto y por aquí vamos a copiar este foro porque sería exactamente lo mismo.
+
+00:27.080 --> 00:32.060
+Vamos a copiar todo esto incluyendo el Ford y simplemente vamos a pegarlo por aquí.
+
+00:32.060 --> 00:39.350
+Luego de un formulario por lo que sería simplemente Products ya que estamos entregando un producto y
+
+00:39.350 --> 00:41.150
+no emplear esta sección.
+
+00:41.210 --> 00:44.930
+Todo esto lo voy a eliminar porque no va a ser necesario en este punto.
+
+00:44.930 --> 00:50.170
+Aquí lo único que quiero hacer sería asignar o desestimar un producto de aquí también se puede referenciar
+
+00:50.180 --> 00:52.680
+De esta manera junto a mí como tú quieras.
+
+00:53.150 --> 00:59.240
+Hacemos este cambio y ya con esto se regresamos aquí refrescamos por vamos a tener el producto perfecto
+
+00:59.830 --> 01:06.030
+que es lo que yo quiero colocar sería un cheque que vamos a emplear un poco más adelante que input check
+
+01:06.150 --> 01:14.780
+box el nombre no me interesa pero sí quiero Conservative que es simplemente colocar bajo el Heydi del
+
+01:14.780 --> 01:18.090
+producto producto punto Heydi.
+
+01:18.510 --> 01:27.050
+Lo mismo vamos a hacer con la carta es decir justamente por aquí voy a colocarle allí y simplemente
+
+01:27.480 --> 01:32.750
+producto hay que recuerda que los identificadores son únicos en toda la página HTML por lo tanto no
+
+01:32.750 --> 01:34.870
+puedes colocar el mismo identificador que coloca por aquí.
+
+01:35.160 --> 01:40.160
+Fíjate que yo con lo que aquí Prot seguido del identificador del producto y por aquí simplemente coloqué
+
+01:40.250 --> 01:41.840
+el identificador del producto.
+
+01:41.840 --> 01:52.010
+Ahora bien por aquí como valor también voy a colocarle el identificador del producto y ya con esto tenemos
+
+01:52.480 --> 01:53.080
+lo siguiente.
+
+01:53.090 --> 01:54.410
+Perfecto.
+
+01:54.410 --> 01:59.090
+Ahora bien yo quiero activar que cada vez que le da click al título básicamente se active o se desactive
+
+01:59.420 --> 02:00.360
+el check box.
+
+02:00.440 --> 02:07.570
+Para eso podemos colocar hasta un lema escribimos Leuven y por aquí simplemente vamos a rodar esto lo
+
+02:07.580 --> 02:10.330
+cortamos aquí y simplemente lo pegamos aquí.
+
+02:10.490 --> 02:15.350
+El foro básicamente ese juego con lo que coloquemos aquí para que haga Match cada vez que nosotros hacemos
+
+02:15.350 --> 02:16.620
+un clic sobre el Leuven.
+
+02:16.680 --> 02:22.820
+Básicamente activar o desactivar el check box vamos a colocarlo aquí para ver qué pasa regresamos aquí
+
+02:22.820 --> 02:23.720
+refrescamos.
+
+02:23.890 --> 02:24.800
+Seamos un click.
+
+02:24.830 --> 02:30.020
+Básicamente se va activar si le damos otro click se desactiva y lo mismo va a suceder si damos un click
+
+02:30.020 --> 02:30.410
+por aquí.
+
+02:30.410 --> 02:35.020
+Por lo tanto ya completamos el objetivo de este video.

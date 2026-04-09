@@ -1,0 +1,28 @@
+<div class="form-group">
+    {{ form.name.label }} 
+    {{ form.name(class="form-control") }}
+</div>
+
+{{ form.id }}
+
+{{ form.csrf_token }}
+
+{{ form.recaptcha }}
+
+{% if form.phonelist %}
+    {{ form.phoneCode.label }}
+    {{ form.phoneCode }}
+
+    {{ form.countryCode.label }}
+    {{ form.countryCode }}
+
+    {{ form.phone.label }}
+    {{ form.phone }}
+
+    {{ form.phonelist.label }}
+    {{ form.phonelist }}
+    {% for field in form.phones %}
+        {{ field }}
+    {% endfor %}
+{% endif %}
+

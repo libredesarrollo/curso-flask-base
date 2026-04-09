@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ user_manager.USER_APP_NAME }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='global/css/style.custom.css') }}">
+
+    {# *** Allow sub-templates to insert extra html to the head section *** #}
+    {% block extra_css %}{% endblock %}
+  </head>
+
+
+<body>
+    {% block body %}
+    {% include 'fragment/_nav.html' %}
+    {% block menu %}
+
+    {% endblock %}
+    <hr class="no-margins"/>
+
+    <div id="main-div" class="with-margins">
+    {# One-time system messages called Flash messages #}
+    {% block flash_messages %}
+        {%- with messages = get_flashed_messages(with_categories=true) -%}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category=='error' %}
+                        {% set category='danger' %}
+                    {% endif %}
+                    <div class="alert alert-{{category}}">{{ message|safe }}</div>
+                {% endfor %}
+            {% endif %}
+        {%- endwith %}
+    {% endblock %}
+
+    {% block main %}
+        {% block content %}{% endblock %}
+    {% endblock %}
+    </div>
+
+    <br/>
+    {% include 'fragment/_footer.html' %}
+    {% endblock %}
+
+    <script src="{{ url_for('static',filename='global/js/jquery-3.4.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='global/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='product/js/main.js') }}"></script>
+    {# *** Allow sub-templates to insert extra html to the bottom of the body *** #}
+    {% block extra_js %}{% endblock %}
+
+  </body>
+</html>

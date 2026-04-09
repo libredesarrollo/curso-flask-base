@@ -1,0 +1,85 @@
+{% extends 'layout/base.html' %}
+{% from 'macro/_pagination.html' import m_pagination %}
+
+{% block container %}
+
+<a class="btn btn-primary mt-2 mb-2" href="{{ url_for('usercrud.create') }}"><i class="fa fa-plus"></i> Crear</a>
+
+
+<br>
+<div class="list-user row">
+  {% for user in users.items %}
+
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+              {{ user['email'] }}
+            </div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">
+              {{ user['username'] }}
+            </div>
+          </div>
+          <div class="col-auto">
+            <a data-toggle="tooltip" data-placement="top" title="Editar" class="btn btn-success btn-sm"
+              href="{{ url_for('usercrud.update', id=user['id']) }}"><i class="fa fa-edit"></i></a>
+            <button data-toggle="modal" data-target="#deleteModal" data-name="{{ user['name'] }}"
+              data-id="{{user['id']}}" class="btn btn-danger btn-sm"
+              href="{{ url_for('usercrud.delete', id=user['id']) }}"><i data-toggle="tooltip"
+                title="Eliminar usuario {{ user['name'] }}" data-placement="top" class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{{ m_pagination(users,'usercrud.index') }}
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Borrar: <span></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Seguro que desea borrar el registro seleccionado?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <a href="#" id="deleteProduct" class="btn btn-danger">Borrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.onload = function () {
+    $('#deleteModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var name = button.data('name') // Extract info from data-* attributes
+      var id = button.data('id') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title span').text(name)
+
+      $("#deleteProduct").attr("href", "/dashboard/user/delete/" + id)
+
+
+    })
+  }
+</script>
+
+
+
+
+
+{% endblock %}

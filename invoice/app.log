@@ -1,0 +1,174 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:23] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:23] "GET /static/global/js/vue.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:23] "GET /api/categories/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:23] "GET /api/products/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:24] "GET /api/categories/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:24] "GET /api/products/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:37:27] "GET /product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:45] "GET /product HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:47] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:46:58] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:17] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:33] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:49:56] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:50:25] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:28] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:29] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:47] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:48] "POST /product-update/25 HTTP/1.1" 302 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:48] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:54] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:55] "POST /product-update/25 HTTP/1.1" 302 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:55] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:56] "POST /product-update/25 HTTP/1.1" 302 -
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:51:56] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "POST /product-update/25 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:52:03] "GET /product-update/25?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/product/model/product.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:my_app:Actualizar producto
+INFO:werkzeug:127.0.0.1 - - [08/Jan/2020 15:53:56] "GET /product-update/25 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 579-443-342
+INFO:werkzeug: * Detected change in '/Users/andrescruz/Desktop/flask/4_flask_app/flask_app/my_app/__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

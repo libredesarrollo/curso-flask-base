@@ -1,0 +1,18 @@
+{% extends 'layout/base.html' %}
+
+{% block container %}
+<div class="card">
+
+    <div class="card-header">
+        Actualizar producto: {{ product.name }}
+    </div>
+
+    <div class="card-body">
+        <form action="{{ url_for('product.update',id=product.id) }}" method="POST" enctype="multipart/form-data">
+            {% include 'product/_form.html' %}
+            <button class="btn btn-success" type="submit"><i class="fa fa-save"></i> Actualizar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

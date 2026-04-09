@@ -1,0 +1,106 @@
+WEBVTT
+
+00:04.980 --> 00:10.020
+Bien esta petición así nomás no vamos a querer usar es decir tenemos que hacer algo un poco más especializado
+
+00:10.160 --> 00:14.690
+o que se adapte más al otro aplicación que en este caso sería cada vez que la hemos Cleta este botón.
+
+00:14.700 --> 00:19.890
+Básicamente para la función de Fetch que definimos anteriormente con los argumentos hace que para eso
+
+00:19.890 --> 00:24.960
+ya no necesitamos un formulario así que perfectamente lo podemos eliminar por aquí ya no sería necesario
+
+00:25.260 --> 00:29.940
+un botón de tipo Sumi así que no podemos eliminar y en su lugar vamos a ponerle un evento a un clip
+
+00:30.810 --> 00:37.320
+el cual depararon la función de Mallea y también vamos a necesitar una referencia al texto que tenemos
+
+00:37.320 --> 00:37.930
+aquí.
+
+00:38.040 --> 00:42.510
+Por lo tanto vamos a quitar este Main y vamos a colocar simplemente un identificador a este elemento
+
+00:42.510 --> 00:44.910
+al imput y que estuviera molesto.
+
+00:44.910 --> 00:47.940
+Esto tampoco será necesario así que lo eliminamos.
+
+00:47.940 --> 00:58.230
+Ahora sí vamos a crear una función llamada en este punto función y por aquí lo tenemos.
+
+00:58.230 --> 01:03.090
+Básicamente lo que estamos haciendo en este punto sería construir el esqueleto de todo lo que necesitamos
+
+01:03.090 --> 01:09.270
+para que esto funcione y para eso tenemos la función de ser que se activa cada vez que demos un clic
+
+01:10.230 --> 01:11.610
+en el botón anterior.
+
+01:11.790 --> 01:14.910
+Vamos a ir probando a ver qué tal regresamos aquí introduzcamos.
+
+01:15.060 --> 01:18.560
+No tenemos ningún error así que si le damos un click aquí tenemos la petición.
+
+01:18.570 --> 01:21.420
+Y bueno básicamente esto era justo lo que yo quería.
+
+01:21.540 --> 01:26.520
+Ahora tenemos que pasarle los datos reales que sería lo que le pasamos por aquí para eso simplemente
+
+01:26.520 --> 01:33.630
+podemos concatenar aquí un documento Puntoticket en el que Wallaby y simplemente indicamos el identificador
+
+01:33.630 --> 01:38.420
+del elemento punto vale para que sea dinámico.
+
+01:38.420 --> 01:44.790
+En esta oportunidad regresamos aquí refrescamos vamos a colocar por ejemplo pop de producto y le vamos
+
+01:44.790 --> 01:50.670
+a buscar porque lo tenemos si revisamos aquí la petición que estamos enviando vamos a ver que estamos
+
+01:50.670 --> 01:51.230
+enviando.
+
+01:51.690 --> 01:59.280
+Si colocamos por ejemplo 1 nuevamente por no tenemos ese realizando la consola aquí tenemos el resultado
+
+01:59.880 --> 02:07.200
+así que en este punto ya estamos casi listo por aquí vamos a crear otra función que vamos a definir
+
+02:07.200 --> 02:13.590
+más adelante pero el momento más dejarlo listo ya que ahora lo vamos a querer construir la lista en
+
+02:13.600 --> 02:18.840
+la lista de producto de manera programática mediante Javascript que simplemente a recibir un listado
+
+02:18.840 --> 02:23.440
+de productos y más adelante vamos a ver qué hacemos correcto pero de momento simplemente tuviéramos
+
+02:23.450 --> 02:26.130
+que llamar justamente en este punto.
+
+02:27.210 --> 02:31.860
+Simplemente le pasamos la respuesta que recuerda que viene siendo en otros productos que perfectamente
+
+02:31.860 --> 02:37.320
+podemos colocar productos para que tenga más sentido así que lo siguiente Vamos a necesitar aquí sería
+
+02:37.320 --> 02:39.360
+para tener la escritura lista.
+
+02:39.690 --> 02:49.470
+Vamos a definirle una idea por ejemplo los productos que vamos a referenciar un poco más abajo pero
+
+02:49.470 --> 02:54.030
+de momento con esto estamos listo para seguir avanzando y poder construir el listado que estamos obteniendo
+
+02:54.090 --> 02:57.390
+vía Facebook mediante la conexión que hicimos vía fetch.

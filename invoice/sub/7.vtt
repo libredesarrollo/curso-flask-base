@@ -1,0 +1,316 @@
+WEBVTT
+
+00:05.260 --> 00:10.060
+Ahora finalmente vamos a implementar la búsqueda de nuestro controlador es decir específicamente mediante
+
+00:10.060 --> 00:12.640
+esta función ya que trasfusión función que nosotros similar.
+
+00:12.840 --> 00:18.730
+Por lo tanto en tu navegador tienes que definir sería tu Voix Dispatch que si bien la función que nosotros
+
+00:18.730 --> 00:23.950
+vamos a trabajar para que el formulario que tengamos aquí definido por defecto apunte hacia esta función
+
+00:23.950 --> 00:25.180
+que tenemos aquí definida.
+
+00:25.630 --> 00:30.400
+Así que lo que nosotros queremos hacer sería una sencilla búsqueda por palabras claves es decir por
+
+00:30.400 --> 00:32.600
+coincidencia es decir aquellos elementos que hagan más.
+
+00:32.680 --> 00:37.300
+Por ejemplo vamos a hacer un pequeño ejemplo vamos a ir a nuestra base de datos y vamos a ver que aquí
+
+00:37.300 --> 00:40.330
+tenemos un par de productos productos y productos.
+
+00:40.330 --> 00:46.740
+Yo lo que quiero sería que cuando yo coloque aquí por ejemplo básicamente el busque coincidencias por
+
+00:47.200 --> 00:51.510
+aquí va a haber que básicamente aquí tenemos todos que cumplen la condición que sería producto 1 productos
+
+00:51.910 --> 00:56.660
+porque ambos elementos contienen la palabra o fragmento de palabra llamado prot.
+
+00:56.680 --> 01:02.410
+Lo mismo sucedería o debería de suceder si nosotros buscamos por ejemplo Tut de aquí debería aparecer
+
+01:02.770 --> 01:06.910
+tanto producto 1 como producto 2 porque ambos coinciden con este término de búsqueda.
+
+01:06.910 --> 01:11.950
+Como puedes ver básicamente siempre vamos a buscar tokens o palabras claves como tú lo quieras ver si
+
+01:11.950 --> 01:17.140
+yo coloco por ejemplo 1 debería aparecer también producto 1 y se colocó deberían aparecer productos
+
+01:17.380 --> 01:19.940
+ya que solamente voy a buscar coincidencias por el nombre.
+
+01:19.990 --> 01:24.840
+Aquí básicamente espero que lo conozca pero vamos a emplear lo que sería la cláusula alike de se cuelen
+
+01:24.850 --> 01:30.180
+básicamente con su variación o su implementación empleando el flash pero básicamente sería la cláusula
+
+01:30.180 --> 01:32.650
+Lykke que es lo que vamos a emplear en este punto.
+
+01:32.650 --> 01:37.180
+Por lo tanto ahora tenemos que ver cómo nosotros podemos aplicar un link en plazo es decir empleando
+
+01:37.180 --> 01:39.560
+nuestro héroe al que imita.
+
+01:39.730 --> 01:43.520
+Para eso vamos a volver a la documentación oficial para ver qué podemos hacer.
+
+01:43.690 --> 01:50.050
+Vamos a buscar por aquí con controlé F o F click y porque ya tenemos algunos resultados.
+
+01:50.320 --> 01:52.480
+Esto es justamente lo que nosotros queremos hacer.
+
+01:52.540 --> 01:56.950
+Básicamente tenemos que pesificar la columna afectada que en este caso también sería el decir el nombre
+
+01:57.250 --> 02:02.200
+y porque tenemos que indicar básicamente lo que hace esto porcentaje en caso que no lo conozca sería
+
+02:02.230 --> 02:04.010
+buscar esta coincidencia así los Mazz.
+
+02:04.120 --> 02:09.010
+Por ejemplo si nosotros aquí solamente colocamos un porcentaje al final de todas es decir al final del
+
+02:09.010 --> 02:11.050
+fragmento de búsqueda que en este caso seriales.
+
+02:11.230 --> 02:15.610
+Básicamente no que voy a hacer sería buscar coincidencias con aquellos elementos que ya hemos colocado
+
+02:15.610 --> 02:17.650
+por aquí que en este caso será el nombre.
+
+02:17.650 --> 02:21.670
+Vamos a empezar a hacer pruebas con esto para ver qué tal funciona pero recuerda que básicamente se
+
+02:21.670 --> 02:24.750
+está traduciendo tal cual puede ver por aquí.
+
+02:24.760 --> 02:31.720
+Básicamente sería esto Wer el término de búsqueda y porque simplemente colocamos links y básicamente
+
+02:31.720 --> 02:37.810
+lo que queremos buscar que en este caso sería este término de búsqueda vamos a empezar a ver qué pasa.
+
+02:37.960 --> 02:42.370
+Así que básicamente regresamos aquí y lo primero que tenemos que ver es cómo nosotros podemos recibir
+
+02:42.700 --> 02:44.320
+el valor que queremos buscar.
+
+02:44.440 --> 02:50.550
+Para eso recuerda que nosotros podemos acceder al recurso y algo llamado values.
+
+02:50.860 --> 02:55.480
+Vamos a ver que por aquí vamos a colocar esto en un pin bordamos.
+
+02:55.630 --> 03:03.660
+Regresamos por aquí y refrescamos vamos a colocar aquí por ejemplo Hola y le damos a buscarlo.
+
+03:04.240 --> 03:10.970
+Si revisamos la consola por aquí deberíamos de ver nuestro término de búsqueda justamente aquí.
+
+03:11.080 --> 03:18.860
+Aquí aparece por lo tanto está en una posición llamado Holler y simplemente aquí tenemos que colocar.
+
+03:19.290 --> 03:26.580
+Ya con esto se refrescamos Aquí regresamos aquí por aquí vamos a tener de tal manera que este será el
+
+03:26.580 --> 03:31.380
+mecanismo con el cual nosotros podemos buscar un término de búsqueda que vaya viaje.
+
+03:31.950 --> 03:33.030
+Ahora bien cuál es el problema.
+
+03:33.420 --> 03:39.300
+Básicamente si recargamos la página vas a ver que aquí tenemos un problema porque nos va indicar que
+
+03:39.300 --> 03:41.690
+básicamente estamos intentando acceder algo que no existe.
+
+03:41.700 --> 03:48.240
+Es decir si simplemente removemos esto vas a ver que esto vuelva a funcionar.
+
+03:48.240 --> 03:53.130
+Por lo tanto antes de consultarla tenemos que preguntar si la misma está definida para eso nada más
+
+03:53.130 --> 03:56.630
+fácil simplemente tenemos que colocar aquí un condicional.
+
+03:56.730 --> 04:01.680
+Preguntamos por esto es decir si tenemos valores y si tenemos valores significa que básicamente debería
+
+04:01.680 --> 04:02.550
+estar nuestro Search.
+
+04:03.360 --> 04:09.930
+Así que vamos a cortar esto y vamos a pegarlo por aquí y ya con esto no debería dar ninguna sección.
+
+04:10.050 --> 04:13.350
+Si básicamente nuestro ya no está definido aquí lo tenemos.
+
+04:13.350 --> 04:19.170
+Aquí no habrá ninguna sección pero si regresamos aquí y refrescamos vas a ver que por aquí lo vamos
+
+04:19.170 --> 04:19.890
+a tener.
+
+04:19.890 --> 04:25.620
+Por lo tanto este será el mecanismo es decir si si nosotros estamos recibiendo valores simplemente no
+
+04:25.620 --> 04:29.750
+vamos a buscar en este punto con el que vimos anteriormente es decir vamos a buscar coincidencias con
+
+04:29.780 --> 04:34.110
+los productos que tengamos en nuestra base de datos así que por aquí lo que resta sería construir el
+
+04:34.110 --> 04:39.620
+cuello lo primero que vamos a hacer sería guardar esto para que pueda ser más fácilmente consumido Product
+
+04:39.840 --> 04:42.190
+Search va a ser igual.
+
+04:42.210 --> 04:48.950
+Básicamente esto y por aquí simplemente Products va a ser igual a Proust.
+
+04:48.990 --> 04:56.470
+Para eso recuerda que tenemos que cargar lo mismo es decir venir aquí y colocar simplemente from MEIC
+
+04:56.640 --> 05:06.910
+a punto producto punto móvil punto product import product porque lo tenemos.
+
+05:07.050 --> 05:13.160
+Por lo tanto ya no podemos emplear perfectamente porque colocamos product Tacuary para armar el cuadro
+
+05:13.170 --> 05:19.170
+y punto ya que tenemos que emplearnos a meter filtro tal cual vista anteriormente por aquí en la documentación
+
+05:19.170 --> 05:23.730
+oficial para poder ampliar nuestro Lykke y porque simplemente tenemos que colocar el término de búsqueda
+
+05:24.250 --> 05:33.050
+en otro caso sería producto punto en punto LyFC y por aquí básicamente el término de búsqueda colocamos
+
+05:33.060 --> 05:39.750
+aquí Link y ahora sí aunque aquí tenemos un pequeño problema que sería básicamente cómo vamos a trabajar
+
+05:39.780 --> 05:45.390
+con valor dinámico es decir que está básicamente en una variable porque estamos viendo básicamente que
+
+05:45.390 --> 05:50.700
+le está pasando un Extrem estático no sería dinámico como sería nuestro caso que estamos trabajando
+
+05:50.700 --> 05:55.920
+con una variable es decir como podemos hacer en este caso para pasar aquí nuestro user y concatenar.
+
+05:56.010 --> 06:03.360
+Básicamente el porcentaje que vamos a hacer una pequeña prueba por aquí y básicamente lo que va a ser
+
+06:03.360 --> 06:11.910
+por aquí sería primero vamos a imprimir algo y simplemente voy a querer imprimir una string porque básicamente
+
+06:11.910 --> 06:17.560
+va a colocar aquellos caracteres que quiero que siempre estén en este caso sería el asterisco porque
+
+06:17.580 --> 06:23.760
+ya a colocar simplemente la variable en este caso vamos a representarlo como si fuera cero ya que por
+
+06:23.760 --> 06:29.760
+aquí vamos a emplear la función llamada Format y simplemente vamos a indicarle cuál va a ser el valor
+
+06:29.760 --> 06:35.340
+que nosotros vamos a reemplazar aquí en el cerro que en este caso sería nuestro producer así que simplemente
+
+06:35.340 --> 06:39.240
+lo colocamos por aquí y vamos a ver qué logramos con esto.
+
+06:39.240 --> 06:47.420
+Regresamos por aquí y refrescamos vamos a regresar aquí y vamos a ver que aquí aparece simplemente onas
+
+06:47.430 --> 06:49.480
+que es justamente lo que nosotros queremos buscar.
+
+06:49.560 --> 06:55.530
+Por lo tanto en este punto ya podemos colocar este mismo patrón de búsqueda simplemente lo cortamos
+
+06:55.530 --> 06:58.130
+aquí y lo pegamos en nuestro Link.
+
+06:59.820 --> 07:06.960
+Ahora por aquí vamos a imprimir los productos colocábamos simplemente Prin Products y vamos a ver qué
+
+07:06.960 --> 07:08.070
+logramos con esto.
+
+07:08.370 --> 07:13.770
+Por aquí vamos a colocar por ejemplo el producto lo vamos a buscar.
+
+07:13.770 --> 07:17.280
+Regresamos aquí y aquí tenemos el cuadro que se está construyendo.
+
+07:17.280 --> 07:25.020
+Perfecto vamos a colocar aquí el punto para obtener todos los datos y ahora si recargamos aquí para
+
+07:25.020 --> 07:29.910
+que se vuelva a realizar la petición y porque vamos a ver qué tenemos nuestro productos si colocamos
+
+07:29.910 --> 07:37.980
+por ejemplo dos le vamos a buscar va a saber que solamente aparece un vacío y por qué está pareciendo
+
+07:37.980 --> 07:38.680
+un.
+
+07:38.760 --> 07:44.040
+Básicamente por la condición que estamos colocando por aquí si por aquí colocamos otro asterisco para
+
+07:44.040 --> 07:47.040
+que también haga match por ambos extremos de nuestro nombre.
+
+07:47.040 --> 07:51.890
+Vamos a ver que se recargamos aquí por aquí no vamos a tener.
+
+07:51.930 --> 07:56.070
+Así que para tener una búsqueda más completa básicamente tenemos que buscar coincidencias por ambos
+
+07:56.070 --> 08:00.180
+extremos del estrechen que estamos colocando porque si no va a ocurrir lo que vimos anteriormente.
+
+08:00.240 --> 08:02.870
+Básicamente todo un comportamiento llamativo del propio nick.
+
+08:03.240 --> 08:04.960
+Y así funciona en SQL.
+
+08:05.370 --> 08:10.620
+Así que ya en este punto tenemos otros productos y por lo tanto sólo podemos pasar perfectamente a nuestra
+
+08:10.620 --> 08:11.280
+lista.
+
+08:11.280 --> 08:16.980
+Por lo tanto si colocamos product Product y vamos a ver que logramos con esto regresamos aquí.
+
+08:16.980 --> 08:23.330
+Recargamos no tenemos ningún error y si regresamos aquí y recargamos si tenemos un error por lo tanto
+
+08:23.990 --> 08:31.450
+en este punto también vamos a indicar que producto de Iguala no lo colocamos no lo regresamos aquí en
+
+08:31.460 --> 08:35.230
+recargamos y ya todo siguió funcionando correctamente.

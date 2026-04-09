@@ -1,0 +1,166 @@
+WEBVTT
+
+00:04.980 --> 00:09.920
+Y que vamos a querer hacer sería darle un poco más de interactividad a todo esto es decir simplemente
+
+00:09.920 --> 00:14.510
+vamos a querer saber si tenemos seleccionado un conjunto de productos o no para permitir o no ciertas
+
+00:14.510 --> 00:15.040
+acciones.
+
+00:15.050 --> 00:20.510
+Así de simple así que vamos a comenzar con esto vamos a colocar por aquí por ejemplo pero le damos a
+
+00:20.510 --> 00:24.530
+buscar y simplemente apresar nuestros productos que cumplan con esta condición.
+
+00:24.530 --> 00:29.840
+Ahora bien básicamente nosotros podemos saber fácilmente si tenemos seleccionado un producto simplemente
+
+00:29.840 --> 00:35.570
+por este CHEC agregamos anteriormente es decir vamos a seleccionar esto y básicamente tenemos que obtener
+
+00:35.570 --> 00:37.090
+la referencia a esto.
+
+00:37.130 --> 00:41.940
+Por lo tanto necesitamos un mecanismo con el cual poder tener referencia a este hecho fácilmente.
+
+00:42.020 --> 00:47.870
+Para eso puedes colocar una clase nombre etc. En mi caso ya que estamos trabajando de manera programática
+
+00:47.900 --> 00:52.460
+y no vamos a emplear todo esto mediante un formulario es decir el enfoque clásico voy a colocar una
+
+00:52.460 --> 00:57.290
+clase ya que de esta manera lo podemos referir más fácilmente así que vamos a bajar hasta acá donde
+
+00:57.290 --> 01:04.070
+tenemos la construcción de las cartas que vimos anteriormente porque tenemos el check box y simplemente
+
+01:04.070 --> 01:11.500
+vamos a agregar una clase Class y voy a indicarle que se llame por ejemplo Heute product.
+
+01:11.510 --> 01:12.500
+Así de simple.
+
+01:12.500 --> 01:18.800
+Por lo tanto yo tengo un mecanismo como referenciar a este check box copiamos esto regresamos aquí refrescamos
+
+01:19.160 --> 01:20.830
+y vamos a analizar nuevamente la búsqueda.
+
+01:20.900 --> 01:24.290
+Colocamos problemas a buscar y porque lo tenemos perfecto.
+
+01:24.290 --> 01:32.910
+Por lo tanto si hacemos algo similar al documento punto y selector y colocamos por donde queremos un
+
+01:32.910 --> 01:38.180
+carro que en este caso sería el punto porque sería una clase donde el nombre de la clase que colocamos
+
+01:38.240 --> 01:41.500
+nuestro caso sería hoy pronto vamos a obtener el siguiente resultado.
+
+01:41.540 --> 01:42.470
+Qué viene siendo este.
+
+01:42.800 --> 01:47.020
+Pero como aquí tenemos un problema porque solamente está devolviendo un elemento por qué.
+
+01:47.220 --> 01:52.160
+Porque no tenemos que emplear el lector porque solamente una instancia de un elemento.
+
+01:52.160 --> 01:56.540
+Si no tenemos que emplear XLS electoral para que nos devuelva un listado de todas las coincidencias
+
+01:56.540 --> 01:59.120
+que en este caso sería lo que vemos aquí perfecto.
+
+01:59.150 --> 02:04.010
+Ahora bien lo siguiente que yo quiero obtener sería saber si esto lo tenemos seleccionado o no es decir
+
+02:04.940 --> 02:12.980
+para eso podemos emplear un selector en Java llamado Sect y esto no vindicar si básicamente la condición
+
+02:12.980 --> 02:17.750
+que colocamos aquí que sería esta clase están seleccionados solo como puede ver nos está indicando que
+
+02:17.750 --> 02:23.170
+no tenemos ninguno porque ninguno cumple con la condición pero si seleccionamos uno y consultamos aquí
+
+02:23.180 --> 02:24.030
+lo tenemos.
+
+02:24.170 --> 02:30.140
+Y si colocamos el otro por aquí lo vamos a tener de tal manera que de esta manera podemos saber si tenemos
+
+02:30.140 --> 02:35.300
+seleccionado o no ciertos productos o nuestros productos como lo quieras ver así que regresamos aquí
+
+02:35.950 --> 02:47.410
+y simplemente vamos a crear una nueva función Sendak la vamos a llamar que simplemente por aquí indicaron.
+
+02:47.600 --> 02:52.230
+Products Serpost de Iguala.
+
+02:52.430 --> 02:59.110
+Básicamente la selección que construimos anteriormente y porque simplemente va a preguntarse por Duchess
+
+02:59.230 --> 03:02.500
+2.0 es igual igual a cero.
+
+03:02.510 --> 03:06.080
+Si este es el caso simplemente voy a dar un mensaje error
+
+03:09.220 --> 03:15.920
+debe de seleccionar al menos tu producto.
+
+03:16.100 --> 03:23.040
+Fíjate que como esto es una red perfectamente podemos preguntar por la longitud del mismo.
+
+03:23.300 --> 03:25.080
+Qué es lo que estamos haciendo aquí.
+
+03:25.530 --> 03:29.900
+Y por supuesto tenemos que reformar para no seguir con la discusión del resto del código que tenemos
+
+03:29.900 --> 03:30.530
+aquí definido.
+
+03:31.370 --> 03:37.940
+Ahora bien simplemente voy a asociar esta función al evento click del botón de su humito del formulario
+
+03:37.940 --> 03:39.500
+que construimos anteriormente.
+
+03:39.500 --> 03:44.060
+Por lo tanto ya vamos a ampliar el enfoque de formulario es decir el tradicional ya que vamos a enviar
+
+03:44.060 --> 03:51.140
+de manera programática mediante escrita quitamos esto y vamos a quitar el Thaís submit y simplemente
+
+03:51.140 --> 03:57.380
+vamos a colocar completa el nombre de la función que sería segurata y nos parentesis guardamos.
+
+03:57.470 --> 04:03.560
+Regresamos aquí refrescamos y vamos a probar nuevamente vamos a darle Viano y vamos a tener el siguiente
+
+04:03.560 --> 04:10.640
+error es decir el siguiente Hagler pero si colocamos aquí por ejemplo pró buscamos algo seleccionamos
+
+04:10.640 --> 04:12.700
+éste y le damos a enviar.
+
+04:12.740 --> 04:13.390
+Va a saber qué.
+
+04:13.400 --> 04:18.500
+Básicamente vamos a seguir con el resto de la ejecución de la función que de momento no hace absolutamente
+
+04:18.500 --> 04:23.750
+nada pero de esta manera aprendimos a empáticamente saber si tenemos seleccionado un conjunto de productos
+
+04:23.840 --> 04:24.050
+o no.

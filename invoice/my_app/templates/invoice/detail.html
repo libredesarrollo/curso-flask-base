@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura #{{ sell.id }}</title>
+</head>
+
+<body>
+    <h3><strong>Nombre:</strong> {{sell.name}} {{sell.surname}}</h3>
+    <h3><strong>Empresa:</strong> {{sell.company}}</h3>
+
+    <ul>
+        {% for p in sell.sellproducts %}
+        <li><strong>{{ p.product.name }}:</strong> {{p.product.price}}$</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <h4>Total: {{ sell.sellproducts | sum(attribute='product.price')}}$</h4>
+
+</body>
+
+</html>

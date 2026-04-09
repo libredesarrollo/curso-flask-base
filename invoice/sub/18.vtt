@@ -1,0 +1,265 @@
+WEBVTT
+
+00:05.490 --> 00:07.350
+Ahora finalmente vamos a hacer la venta.
+
+00:07.350 --> 00:12.290
+Para eso recordemos que tenemos que tener una función llamada cuota cero que es la que definimos por
+
+00:12.350 --> 00:13.910
+aquí así que vamos a ello.
+
+00:15.170 --> 00:16.330
+De j.
+
+00:16.330 --> 00:23.970
+Shell la cual va a tener de ruta básicamente va a pasar J.
+
+00:24.150 --> 00:26.030
+Y ya con esto tenemos la función anterior.
+
+00:26.030 --> 00:29.510
+Ahora bien esto es una función que nosotros vamos a querer que solamente puede ser accedida mediante
+
+00:29.510 --> 00:31.040
+el método del tipo pos.
+
+00:31.190 --> 00:38.150
+Por lo tanto aquí tenemos que colocar otro parámetro o u otro opción llamada simplemente metros para
+
+00:38.150 --> 00:43.240
+definir los métodos que en este caso pero no Reith y simplemente vamos a indicar que sea de tipo pos
+
+00:44.150 --> 00:46.930
+ahora por aquí vamos a continuar con el resto de la función.
+
+00:47.120 --> 00:56.060
+Vamos a preguntar si Rísquez punto meto igual o a la post aunque realmente no haría falta preguntar
+
+00:56.060 --> 01:00.290
+esto porque estamos indicando que sólo esta función puede ser accedida mediante post pero bueno para
+
+01:00.290 --> 01:01.160
+que quede bastante claro.
+
+01:01.160 --> 01:06.440
+Igualmente colócalo si quieres o no lo coloques porque vamos a empezar a procesar los datos es decir
+
+01:06.920 --> 01:12.260
+vamos a crear una instancia de la clase llamada a hacer qué definimos anteriormente y por aquí hemos
+
+01:12.260 --> 01:14.010
+asignado unos valores uno a uno.
+
+01:14.090 --> 01:18.170
+De momento no me voy a preocupar por la validación de los datos Voy a suponer que todo está correctamente
+
+01:18.170 --> 01:19.340
+establecido.
+
+01:19.540 --> 01:30.130
+6.20 va a ser igual a recuas punto from para obtener los datos seguido de básicamente el nombre de campo
+
+01:30.130 --> 01:33.560
+que en este caso sería mé que es el nombre que nosotros le dimos.
+
+01:33.770 --> 01:41.180
+Vamos a hacer lo mismo con el resto de los casos es decir surgen por aquí y también por aquí sería el
+
+01:42.830 --> 01:48.010
+Company para la empresa y con esto ya nosotros podremos crear una nueva venta.
+
+01:48.020 --> 01:52.010
+Ahora bien recuerda que también estamos enviando los productos de esta venta que también tenemos que
+
+01:52.040 --> 01:54.520
+procesar pero este sería un poco diferente.
+
+01:54.530 --> 02:01.040
+Ahora bien básicamente lo primero que tenemos que hacer sería obtener los identificadores para eso aquí
+
+02:01.040 --> 02:09.590
+vamos a colocar un producto que sería el nombre que definimos justamente por aquí sería nuestro rey
+
+02:09.590 --> 02:11.120
+de productos.
+
+02:11.120 --> 02:15.460
+Ahora bien tenemos que convertir este thread nuevamente en una red para que lo podamos iterar.
+
+02:15.470 --> 02:20.060
+Para eso en parte tenemos una función llamada explicó que hace justamente esta operación simplemente
+
+02:20.060 --> 02:25.850
+toma como entrada un Extrem y según el carácter que nosotros hacemos especificando por aquí simplemente
+
+02:25.850 --> 02:31.300
+va a dividir ese stream en toque y esto toca simplemente no convertir en una red una estructura de red.
+
+02:31.310 --> 02:35.540
+Por lo tanto básicamente la definición de la función que teníamos anteriormente que simplemente era
+
+02:35.540 --> 02:44.120
+por ejemplo 1,2 va a convertirlo a simplemente una raíz de la siguiente forma perfecta porque no tenemos
+
+02:44.260 --> 02:48.710
+de momento nuevamente como te repito no vamos a preocuparnos por las variaciones ya que en este punto
+
+02:48.740 --> 02:53.600
+de preguntarse básicamente todos los productos que colocamos aquí corresponden con un producto en nuestra
+
+02:53.600 --> 02:54.530
+base de datos.
+
+02:54.530 --> 02:59.810
+De momento no vamos a hacer nada de esto así que lo siguiente que vamos a hacer sería básicamente asignar
+
+03:00.320 --> 03:06.080
+todo esto a una red llamada Products que vamos a poder iterar por aquí por aquí simplemente preguntamos
+
+03:06.080 --> 03:13.460
+por el PE en nuestro producto en nuestro lista de productos es decir en nuestra lista de identificadores
+
+03:13.460 --> 03:17.540
+de productos y por aquí vamos a empezar la operación vamos a empezar lo interesante.
+
+03:17.900 --> 03:27.290
+Básicamente tenemos que tener la refer ese producto va a ser igual a punto y punto.
+
+03:27.560 --> 03:33.500
+Para obtener un producto ahora por aquí simplemente se produce.
+
+03:33.680 --> 03:43.400
+Vamos a crear ahora una variable con un objeto de esta clase se el producto por aquí vamos a ser simplemente
+
+03:44.360 --> 03:52.700
+el producto punto por ahí va a ser igual a producto punto Heydi que sería producto en singular sería
+
+03:52.700 --> 03:59.450
+el producto que estamos construyendo por aquí ahora por aquí indirectamente gracias a la relación que
+
+03:59.450 --> 04:01.520
+nosotros hicimos anteriormente.
+
+04:02.150 --> 04:09.770
+Es decir la que tenemos aquí sea el prompt perfectamente podemos referenciar el punto ser Products punto
+
+04:11.120 --> 04:16.380
+APEM para agregar un elemento y simplemente vamos a indicarle que agregue nuestros el producto y ya
+
+04:16.400 --> 04:21.320
+de manera automática cuando nosotros guardemos esta relación va a guardar también las ventas de nuestros
+
+04:21.440 --> 04:26.960
+productos y fíjate que aquí tampoco estamos asignando lo que sería el identificador del CL es decir
+
+04:26.960 --> 04:31.030
+el notificador del momento nuestro es el producto ya que automáticamente cuando el tiempo guardando
+
+04:31.090 --> 04:34.500
+toda la base de datos nuestro software al que lo va a hacer por nosotros.
+
+04:34.710 --> 04:40.460
+Nuevamente repito en este punto nosotros tenemos en nuestra base de datos un ser creado pero de igual
+
+04:40.460 --> 04:45.150
+manera se lo estamos asignando a un ser que tampoco está creado en la base de datos.
+
+04:45.350 --> 04:51.560
+Por lo tanto nuestra meta es lo suficientemente inteligente para saber que cuando estamos asignando
+
+04:51.920 --> 04:57.020
+este objeto primero tiene que quedar al ser para que una vez tengamos creates él básicamente va a referenciar
+
+04:57.020 --> 04:58.260
+e identificador del mismo.
+
+04:58.400 --> 05:03.860
+Justamente para hacer de nuestros empleados que tenemos aquí definido todo esto no va a ser por nosotros
+
+05:04.260 --> 05:10.160
+hay que meta así que vamos a seguir lo siguiente y último que tuviéramos que hacer aquí sería simplemente
+
+05:10.160 --> 05:18.970
+guardar en nuestra base de datos de punto sello y simplemente tenemos que guardar nuestro ser lamentable
+
+05:19.580 --> 05:28.200
+porque nuevamente debe punto cesion apuntó Comitán y registramos los cambios en nuestra base de datos
+
+05:28.630 --> 05:35.850
+y ahora por aquí vamos a retomar cualquier cosa por ejemplo vamos a buscar el de esos Fant lo que tenemos
+
+05:35.850 --> 05:43.950
+aquí copiamos vamos acá y simplemente no pegamos por aquí vamos a indicar simplemente una actriz que
+
+05:43.950 --> 05:57.040
+diga algo así por ejemplo guardado compra colocamos y aquí una función de formato indicamos cuál va
+
+05:57.040 --> 06:02.390
+a ser el valor de este parámetro que definimos por aquí que en este caso y en este punto que registramos
+
+06:02.390 --> 06:07.190
+nuestra venta podemos acceder al identificador del mismo justamente luego de hacer el comienzo en nuestra
+
+06:07.190 --> 06:13.340
+base de datos punto y disco y esto sería todo vamos a hacer una prueba para ver si esto funciona o no
+
+06:13.340 --> 06:14.840
+funciona.
+
+06:14.840 --> 06:15.650
+Regresamos aquí.
+
+06:16.160 --> 06:21.800
+Vamos a refrescar y por aquí ten activa la sección de lengua vamos a colocar algunos datos
+
+06:27.010 --> 06:35.120
+y por aquí vamos a buscar unos productos colocados pero vamos a buscar seleccionamos y seleccionamos
+
+06:35.120 --> 06:39.260
+éste y vamos a la que enviará porque ya tenemos un problema.
+
+06:39.320 --> 06:44.740
+Vamos a ver qué fue lo que ocurrió por aquí básicamente tenemos una de las demás que también podemos
+
+06:44.740 --> 06:49.310
+evidenciarse hemos aquí la consola que nos está indicando cuatro 4 0 4 por lo tanto esta ruta no ha
+
+06:49.310 --> 06:52.390
+sido encontrada por qué porque tenemos un enlace aquí.
+
+06:52.430 --> 06:57.320
+Aparte de esto también vamos a quitar todo esto porque no sería necesario aquí recuerda que básicamente
+
+06:57.410 --> 07:04.010
+tiene asuelan las demás es decir una enlace aquí simplemente pudiera colocar el Jäger pero si tienes
+
+07:04.100 --> 07:09.170
+como lo tengo yo que simplemente coloco un Bays tienes que colocar aquí también el Voice porque de igual
+
+07:09.170 --> 07:10.690
+manera lo va a manejar al menos de momento.
+
+07:10.700 --> 07:14.110
+De esta manera para ver qué tal guardamos aquí.
+
+07:14.330 --> 07:20.210
+Otro punto muy importante es que recuerda tener aquí importado tu bebé para poder emplearla así que
+
+07:20.870 --> 07:21.760
+regresamos aquí.
+
+07:21.830 --> 07:29.330
+Refrescamos y vamos a probar nuevamente colocamos problemas a buscar porque colocamos algunos datos
+
+07:33.120 --> 07:37.550
+y seleccionamos algunos productos la enviar y aquí tenemos el resultado.
+
+07:37.770 --> 07:44.700
+Si revisamos la base de datos por aquí vamos a ver que tenemos la compra registrada tanto por aquí como
+
+07:44.700 --> 07:45.500
+en la tabla.
+
+07:45.510 --> 07:47.420
+Vamos a tener la compra registrada.

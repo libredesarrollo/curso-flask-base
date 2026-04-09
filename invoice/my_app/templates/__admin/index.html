@@ -1,0 +1,14 @@
+{% extends 'admin/master.html' %}
+
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static',filename='fontawesome/css/all.min.css') }}">
+{% endblock %}
+
+{% block title %}
+SUper CRUD
+{% endblock %}
+
+{% block body %}
+<h1>Hola mundo <i class="fa fa-user"></i></h1>
+{% endblock %}

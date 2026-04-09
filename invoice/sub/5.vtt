@@ -1,0 +1,124 @@
+WEBVTT
+
+00:05.190 --> 00:09.360
+Lo siguiente que vamos a querer hacer sería básicamente colocar en el cierre es decir en el menú de
+
+00:09.360 --> 00:14.380
+opciones una opción que vaya FACTURACION PARA LOS USUARIOS DE TIPO REGULAR pero para que podamos crear
+
+00:14.380 --> 00:19.110
+la sección primero tenemos que pintar nuestro temple es decir el templete en ministración que viene
+
+00:19.110 --> 00:20.680
+siendo básicamente nuestro líder.
+
+00:20.790 --> 00:24.500
+El menú lateral y básicamente todo lo que construimos hasta este punto.
+
+00:24.510 --> 00:27.980
+Así que para eso lo primero que vamos a hacer sería construir esta página.
+
+00:27.990 --> 00:31.650
+Básicamente puede copiar cualquiera de las que ya tengamos cualquiera que ya emplea en nuestro módulo
+
+00:31.650 --> 00:36.850
+de Gascon es decir el temple de Dashboard y simplemente lo pegas por aquí y simplemente la tiene quedar
+
+00:36.930 --> 00:38.030
+vacío al menos de momento.
+
+00:38.070 --> 00:43.680
+Es decir borramos toda la escritura y también vamos a borrar todo el contenido que sería básicamente
+
+00:44.910 --> 00:46.760
+todo lo que contenga este container.
+
+00:47.040 --> 00:52.470
+Vamos a quitar todo esto hasta llegar justamente hasta este punto simplemente quedaría esto y tampoco
+
+00:52.580 --> 00:58.860
+usar la paginación así que simplemente la voy a eliminar y ya con esto va a lucir de la siguiente manera.
+
+00:58.860 --> 01:05.400
+Perfecto ahora con esto por aquí nosotros podemos colocar nuestro menú opciones para eso vamos a buscar
+
+01:05.400 --> 01:07.550
+aquí control.
+
+01:08.610 --> 01:14.460
+Por aquí lo tenemos y simplemente tenemos que preguntar por esto mismo vamos a copiar esto y vamos a
+
+01:14.460 --> 01:15.400
+pegarlo.
+
+01:15.470 --> 01:21.030
+Sería todo esto o mejor dicho voy a copiar pero no por aquí por lo que se ve el de facturación.
+
+01:21.150 --> 01:29.680
+Es decir colocamos algo así como facturada Xion y por aquí vamos a colocar algún icono.
+
+01:29.700 --> 01:34.740
+Yo busco un icono de la zona o por lo tanto tú puedes buscar otro si no te gusta y cayó en plan pero
+
+01:34.740 --> 01:40.680
+en mi caso yo simplemente puede enviar una llamada fill Voice.
+
+01:40.970 --> 01:47.630
+Ahora vamos a ver si aparece por aquí vamos a preguntar sería por regular y ahora bien vamos a ver como
+
+01:47.630 --> 01:49.420
+va luciendo esto.
+
+01:49.980 --> 01:51.450
+Aquí lo tenemos perfecto.
+
+01:51.450 --> 01:55.860
+Como puedes ver aquí tenemos un par de problemas que sería que por ejemplo esto no debería aparecer.
+
+01:55.860 --> 02:01.890
+Aparte que todavía tenemos que colocar el link el enlace correcto así que por aquí nosotros tenemos
+
+02:01.890 --> 02:08.520
+que mandar alguna página que esté dentro de controlar pero de nuestro inbox así que vamos a copiar esto
+
+02:08.520 --> 02:09.780
+y vamos a pegarlo por aquí.
+
+02:10.010 --> 02:15.420
+Como generalmente se coloca el Index es decir algún listado vamos a construir aquí rápidamente una función
+
+02:15.420 --> 02:18.750
+de índex que sería básicamente los mismos que tenemos aquí.
+
+02:18.960 --> 02:25.560
+Aquí colocamos simplemente la raíz y por aquí lo va a llamar simplemente índex que perfectamente ahora
+
+02:25.560 --> 02:28.100
+podemos emplear en nuestro menú lateral.
+
+02:28.290 --> 02:33.840
+Ahora por aquí está que tenemos aquí también deberíamos protegerlas para que solamente puedan ser accedidos
+
+02:33.840 --> 02:42.210
+mediante un usuario típico así que simplemente vamos a colocar este condicional por aquí y vamos a colocar
+
+02:42.210 --> 02:50.280
+aquí por lo explicado anteriormente ya con esto si regresamos aquí refrescamos básicamente que vamos
+
+02:50.280 --> 02:55.500
+a tener nuestro enlace de facturación que era justamente lo que nosotros queríamos en este punto por
+
+02:55.500 --> 03:01.580
+aquí vamos a colocar emails y por aquí también vamos a colocar Inbox Dispatch.
+
+03:01.580 --> 03:04.140
+Al menos de momento vamos a manejarlo de esta manera.
+
+03:04.140 --> 03:07.260
+Luego vamos a ver una forma un poco más optimizada de hacer todo esto.
+
+03:07.460 --> 03:13.620
+Regresamos aquí damos un click y por aquí lo tenemos justamente lo que yo quería aparece Inbox y por
+
+03:13.620 --> 03:15.690
+lo tanto ya estamos en el módulo de Inbox.

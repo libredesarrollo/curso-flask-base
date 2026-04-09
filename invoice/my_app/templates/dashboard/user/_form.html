@@ -1,0 +1,29 @@
+{{ form.csrf_token }}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            {{ form.username.label }}
+            {{ form.username(class="form-control") }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            {{ form.email.label }}
+            {{ form.email(class="form-control") }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            {{ form.retype_password.label }}
+            {{ form.retype_password(class="form-control") }}
+        </div>
+    </div>
+</div>

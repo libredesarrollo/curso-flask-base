@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+
+{% block container %}
+<div class="card">
+    <div class="card-header">
+        Actualizar categoría: {{ category.name }}
+    </div>
+    <div class="card-body">
+    <form action="{{ url_for('category.update',id=category.id) }}" method="POST">
+        {% include 'category/_form.html' %}
+        <button class="btn btn-success" type="submit"><i class="fa fa-save"></i> Actualizar</button>
+    </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+WEBVTT
+
+00:05.420 --> 00:08.520
+Ahora bien la idea seria consumir los datos que tenemos aquí.
+
+00:08.570 --> 00:14.900
+Viajes desde esta vista hace que aquí implemente vamos a escribir un bloque escrito o vamos a colocar
+
+00:14.900 --> 00:20.600
+un bloque de escrit y simplemente una petición vía fecho que luce de la siguiente manera simplemente
+
+00:20.600 --> 00:25.940
+colocamos Fetch seguido de básicamente a que le queremos dar una petición que de momento simplemente
+
+00:25.940 --> 00:26.950
+sería esto.
+
+00:26.960 --> 00:32.290
+De esta manera luego le pasamos datos reales pero momento vamos a hacerlo así por aquí recuerda que
+
+00:32.300 --> 00:40.310
+esto básicamente funciona en base a promesas por lo tanto aquí tenemos sería un punto en que viene siendo
+
+00:40.310 --> 00:40.790
+la promesa.
+
+00:40.790 --> 00:46.560
+Recuerda que la primera promesa sería básicamente la respuesta que simplemente vamos a llamar llamarles
+
+00:47.600 --> 00:55.110
+para mantener las cosas sino porque sería simplemente un revés punto Jayson para que usted lector Jayson.
+
+00:55.990 --> 00:57.600
+Y luego tenemos que hacer otro.
+
+00:57.920 --> 01:04.340
+Vamos a bajar esto para tener un poco más organizado porque lo colocamos y también por aquí vamos a
+
+01:04.340 --> 01:11.390
+colocar un punto de que viene siendo nuevamente una función que nuevamente recibe una respuesta y ésta
+
+01:11.390 --> 01:15.240
+sería la que nosotros queremos imprimir.
+
+01:15.350 --> 01:23.090
+De momento por aquí vamos a ver qué logramos con esto aunque aquí tenemos un error que sería este paréntesis
+
+01:23.400 --> 01:33.810
+que guardamos y ahora si regresamos aquí habilitamos la consola y refrescamos porque lo tenemos básicamente
+
+01:33.810 --> 01:38.570
+aquí tenemos nuestros productos que estamos conectando o estamos obteniendo desde este método que se
+
+01:38.570 --> 01:43.630
+encarga de obtener todos los productos dado un patrón de búsqueda desde nuestra aplicación.

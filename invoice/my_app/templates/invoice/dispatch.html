@@ -1,0 +1,188 @@
+{% extends 'layout/base.html' %}
+
+{% block container %}
+
+
+<div class="input-group mb-2">
+
+    <input id="search" type="text" class="form-control" placeholder="Buscar">
+    <div class="input-group-append">
+        <button class="btn btn-primary" onclick="search()"> <i class="fa fa-search"></i> </button>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-3 mt-5">
+        <div class="card">
+            <div class="card-header">
+                Venta
+            </div>
+            <div class="card-body" id="sellForm">
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input type="text" class="form-control" name="surname">
+                </div>
+                <div class="form-group">
+                    <label>Empresa</label>
+                    <input type="text" class="form-control" name="company">
+                </div>
+                <button class="btn btn-success btn-sm float-right" onclick="sendData()"><i class="fa fa-save"></i>
+                    Enviar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9 mt-5">
+
+        <div id="listProducts" class="row">
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="MsjInvoiceModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN Modal -->
+
+<script>
+    function search() {
+        fetch('/invoice/jsearch_product?search=' + document.getElementById('search').value)
+            .then(function (res) {
+                return res.json()
+            })
+            .then(function (products) {
+                console.log(products)
+                buildList(products)
+            })
+    }
+
+    function buildList(products) {
+        html = ""
+
+        products.forEach(product => {
+            html += `
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2" id="${product.id}">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <label for="pro_${product.id}">${product.name}</label>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <input type="checkbox" value="${product.id}" class="itemproduct" id="pro_${product.id}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+        });
+
+
+        document.getElementById("listProducts").innerHTML = html
+
+
+    }
+
+    function sendData() {
+
+        productsCheckbox = document.querySelectorAll(".itemproduct:checked")
+
+        if (productsCheckbox.length == 0) {
+            alert("Debe de seleccionar al menos un producto")
+            return
+        }
+
+        products = []
+        productsCheckbox.forEach(pc => products.push(pc.getAttribute('value')))
+
+        console.log(products.join(","))
+
+        var formData = new FormData()
+        formData.append("name", document.querySelector("#sellForm [name=name]").value)
+        formData.append("surname", document.querySelector("#sellForm [name=surname]").value)
+        formData.append("company", document.querySelector("#sellForm [name=company]").value)
+        formData.append("products", products.join(","))
+        formData.append("csrf_token", "{{ csrf_token() }}")
+
+        fetch('/invoice/jsell', {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(res => {
+                html = "<ul>"
+                if(res.code == 500){
+                    // errores
+
+                    if(res.msj.company != undefined)
+                        html += `<li><strong>Empresa:</strong> ${res.msj.company}</li>`
+
+                    if(res.msj.name != undefined)
+                        html += `<li><strong>Nombre:</strong> ${res.msj.name}</li>`
+
+                    if(res.msj.surname != undefined)
+                        html += `<li><strong>Apellido:</strong> ${res.msj.surname}</li>`
+
+               // }else if(res.code == 501){
+                } else{
+                    // todo ok o 501
+                    html += `<li>${res.msj}</li>`
+                }
+                html += "</ul>"
+
+                showModal(html,res.code)
+            })
+
+
+    }
+
+    function showModal(html, code){
+
+        style = "text-danger"
+        title = "Errores Validación"
+        if(code == 200){
+            style = "text-success"
+            title = "Compra Realizada"
+        }
+
+        document.querySelector("#MsjInvoiceModal .modal-title").innerHTML = ` <h3 class="${style}">${title}</h3>`
+
+        $("#MsjInvoiceModal .modal-body").html(html);
+
+        $("#MsjInvoiceModal").modal('show')
+    }
+
+</script>
+
+{% endblock %}

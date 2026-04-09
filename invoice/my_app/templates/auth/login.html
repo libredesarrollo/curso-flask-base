@@ -1,0 +1,35 @@
+{% extends 'layout/base_simple.html' %}
+
+{% block container %}
+<div class="form-small">
+
+    <h3 class="text-center mb-4 text-primary"><i class="fa fa-user fa-3x"></i></h3>
+    <h2 class="text-center">Login</h2>
+
+    <form action="{{ url_for('fauth.login') }}" method="POST">
+        <div class="form-group">
+            {{ form.username.label }} 
+            {{ form.username(class="form-control") }}
+        </div>
+        
+        <div class="form-group">
+            {{ form.password.label }} 
+            {{ form.password(class="form-control") }}
+        </div>
+
+        {{ form.next() }}
+        
+            <input class="btn btn-success float-right" type="submit" value="Enviar">
+            <div class="clearfix"></div>
+        
+    </div>
+    </form>
+
+    <script>
+    var params = new URLSearchParams(window.location.search)
+    if(params.has("next"))
+        document.getElementById("next").value = params.get("next")
+    console.log( document.getElementById("next").value)
+    </script>
+
+{% endblock %}
