@@ -5,7 +5,7 @@ Este proyecto forma parte del curso de desarrollo con Flask. En este módulo nos
 ## Características principales
 - Implementación de un panel de administrador potente.
 - Gestión avanzada de modelos y bases de datos.
-- Manejo de roles y permisos con Flask-User, limitando accesos y delegando permisos.
+- Manejo de roles y permisos con Flask-Security-Too, limitando accesos y delegando permisos.
 - Diseños personalizados y estructuración técnica con extensiones de Flask (Flask-Admin y Flask-Migrate).
 
 ## Requerimientos y ejecución

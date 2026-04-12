@@ -5,7 +5,7 @@ from wtforms import StringField, PasswordField, HiddenField
 from wtforms.validators import InputRequired, EqualTo
 
 from flask_login import  current_user
-from flask_user import UserMixin
+from flask_security import UserMixin, RoleMixin
 
 from sqlalchemy import Enum
 from werkzeug.security import check_password_hash,generate_password_hash
@@ -32,14 +32,16 @@ class User(db.Model,UserMixin):
     active = db.Column('is_active', db.Boolean(), nullable=False, server_default='1')
     email = db.Column(db.String(255), nullable=False, unique=True)
     email_confirmed_at = db.Column(db.DateTime())
+    fs_uniquifier = db.Column(db.String(255), unique=True, nullable=False)
     # Relationships
     roles = db.relationship('Role', secondary='user_roles')
     #brithday = db.Column(db.Date)
 
-    def __init__(self, username, password, email):
+    def __init__(self, username, password, email, fs_uniquifier):
         self.username = username
         self.password = password
         self.email = email
+        self.fs_uniquifier = fs_uniquifier
 
     @property
     def is_authenticated(self):
@@ -65,7 +67,7 @@ class User(db.Model,UserMixin):
         return check_password_hash(self.pwhash,password)
 
 # Define the Role data-model
-class Role(db.Model):
+class Role(db.Model, RoleMixin):
     __tablename__ = 'roles'
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(50), unique=True)

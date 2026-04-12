@@ -5,7 +5,7 @@ from werkzeug import abort, secure_filename
 from sqlalchemy.sql.expression import not_,or_
 
 from flask_login import login_required
-from flask_user import roles_required
+from flask_security import roles_required
 
 from my_app import db, app, ALLOWED_EXTENSIONS_FILES
 from my_app import rol_admin_need, cache

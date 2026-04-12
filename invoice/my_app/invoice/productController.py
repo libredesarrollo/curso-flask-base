@@ -4,7 +4,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from my_app.product.model.product import Product
 
 from flask_login import login_required
-from flask_user import roles_required
+from flask_security import roles_required
 from flask import jsonify, send_file
 
 from my_app.invoice.models import Sell, SellProduct, InvoiceForm

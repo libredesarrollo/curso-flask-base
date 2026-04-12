@@ -4,7 +4,7 @@ from werkzeug import abort
 from sqlalchemy.sql.expression import not_,or_
 
 from flask_login import login_required
-from flask_user import roles_required
+from flask_security import roles_required
 
 from flask_mail import Message
 from flask_babel import gettext

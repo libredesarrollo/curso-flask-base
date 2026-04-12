@@ -1,7 +1,7 @@
 
 
-from flask_user.forms import RegisterForm,ChangeUsernameForm
-
+from flask_security.forms import RegisterForm
+from flask_wtf import FlaskForm
 from wtforms.validators import DataRequired
 from wtforms import ValidationError, validators
 from wtforms import StringField
@@ -13,7 +13,7 @@ class CustomRegisterForm(RegisterForm):
     # Add a country field to the Register form
     country = StringField('Country', validators=[DataRequired()])
 
-class CustomChangeUsernameForm(ChangeUsernameForm):
+class CustomChangeUsernameForm(FlaskForm):
 
     new_username = StringField('New Username', validators=[
         validators.DataRequired('Username is required'),

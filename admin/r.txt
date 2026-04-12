@@ -18,7 +18,7 @@ Flask-Mail==0.9.1
 Flask-Migrate==3.1.0
 Flask-Restless==0.17.0
 Flask-SQLAlchemy==2.5.1
-Flask-User==1.0.2.2
+Flask-Security-Too
 Flask-WTF==0.15.1
 future==0.18.2
 greenlet==1.1.0

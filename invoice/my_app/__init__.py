@@ -7,8 +7,8 @@ from functools import wraps
 from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_babel import Babel
-from flask_user import UserManager
-from flask_user.signals import user_registered
+from flask_security import Security, SQLAlchemyUserDatastore
+from flask_security.signals import user_registered
 from flask_restless import APIManager
 from flask_caching import Cache
 from flask_debugtoolbar import DebugToolbarExtension
@@ -57,12 +57,9 @@ def get_locale():
     return request.accept_languages.best_match(['en','es'])
     #return "en"
 
-#************ flask User
-user_manager = UserManager(app, db, User)
-
-
-
-
+#************ flask Security
+user_datastore = SQLAlchemyUserDatastore(db, User, Role)
+security = Security(app, user_datastore)
 @user_registered.connect_via(app)
 def _after_registration_hook(sender, user, **extra):
     rol = Role.query.filter_by(name='Regular').one()

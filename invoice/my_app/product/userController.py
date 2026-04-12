@@ -4,15 +4,16 @@ from werkzeug import abort
 from sqlalchemy.sql.expression import not_,or_
 
 from flask_login import login_required
-from flask_user import roles_required
-from flask_user.forms import RegisterForm,ChangeUsernameForm
+from flask_security import roles_required
+from flask_security.forms import RegisterForm
+from flask_security.utils import hash_password
+import uuid
 
 from flask_mail import Message
 from flask_babel import gettext
 
 from my_app import db, rol_admin_need,mail, app, get_locale
 from my_app.auth.model.user import User, Role, UserRoles
-from my_app import user_manager
 from my_app.product.model.userModel import CustomChangeUsernameForm
 
 from collections import namedtuple
@@ -63,11 +64,11 @@ def create():
       
       #crear usuario
       username = request.form['username']
-      password = user_manager.hash_password(request.form['password'])
+      password = hash_password(request.form['password'])
       email = request.form['email']
 
       # crear usuario
-      user = User(username=username, password=password, email=email)
+      user = User(username=username, password=password, email=email, fs_uniquifier=uuid.uuid4().hex)
 
       # asignar el rol
       rol = Role.query.filter_by(name=rol).one()
